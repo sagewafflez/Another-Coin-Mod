@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "coin-mod",
+	"version": "${version}",
+	"name": "Coin Mod",
+	"description": "Just a simple item testing mod for Syleika.",
+	"authors": [
+		"sagewafflez"
+	],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/coin-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"sage.coinmod.CoinMod"
+		],
+		"fabric-datagen": [
+			"sage.coinmod.CoinModDataGenerator"
+		],
+		"client": [
+			"sage.coinmod.CoinModClient"
+		]
+	},
+	"mixins": [
+		"coin-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
